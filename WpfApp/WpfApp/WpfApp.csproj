@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5F4A176-DE6B-4CF8-8540-02C4292A66B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp</RootNamespace>
+    <AssemblyName>WpfApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Blif.cs" />
+    <Compile Include="CnfResolution.cs" />
+    <Compile Include="FormingFileCNF.cs" />
+    <Compile Include="WindowCNF.xaml.cs">
+      <DependentUpon>WindowCNF.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="WindowCNF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Blif\01-adder.blif" />
+    <None Include="Blif\02-adder.blif" />
+    <None Include="Blif\02-adder_col.blif" />
+    <None Include="Blif\03-adder.blif" />
+    <None Include="Blif\03-adder_col.blif" />
+    <None Include="Blif\04-adder.blif" />
+    <None Include="Blif\04-adder_col.blif" />
+    <None Include="Blif\05-adder.blif" />
+    <None Include="Blif\05-adder_col.blif" />
+    <None Include="Blif\06-adder.blif" />
+    <None Include="Blif\06-adder_col.blif" />
+    <None Include="Blif\07-adder.blif" />
+    <None Include="Blif\07-adder_col.blif" />
+    <None Include="Blif\08-adder.blif" />
+    <None Include="Blif\08-adder_col.blif" />
+    <None Include="Blif\09-adder.blif" />
+    <None Include="Blif\09-adder_col.blif" />
+    <None Include="Blif\10-adder.blif" />
+    <None Include="Blif\10-adder_col.blif" />
+    <None Include="Blif\11-adder.blif" />
+    <None Include="Blif\11-adder_col.blif" />
+    <None Include="Blif\12-adder.blif" />
+    <None Include="Blif\12-adder_col.blif" />
+    <None Include="Blif\13-adder.blif" />
+    <None Include="Blif\13-adder_col.blif" />
+    <None Include="Blif\14-adder.blif" />
+    <None Include="Blif\14-adder_col.blif" />
+    <None Include="Blif\15-adder.blif" />
+    <None Include="Blif\15-adder_col.blif" />
+    <None Include="Blif\16-adder.blif" />
+    <None Include="Blif\16-adder_col.blif" />
+    <None Include="Blif\adder.blif" />
+    <None Include="Blif\alu2.blif" />
+    <None Include="Blif\alu4.blif" />
+    <None Include="Blif\apex6.blif" />
+    <None Include="Blif\apex7.blif" />
+    <None Include="Blif\b9.blif" />
+    <None Include="Blif\C17.blif" />
+    <None Include="Blif\C1908.blif" />
+    <None Include="Blif\C2670.blif" />
+    <None Include="Blif\C3540.blif" />
+    <None Include="Blif\C432.blif" />
+    <None Include="Blif\C499.blif" />
+    <None Include="Blif\c8.blif" />
+    <None Include="Blif\C880.blif" />
+    <None Include="Blif\cc.blif" />
+    <None Include="Blif\cht.blif" />
+    <None Include="Blif\cm150a.blif" />
+    <None Include="Blif\cm151a — копия.blif" />
+    <None Include="Blif\cm151a.blif" />
+    <None Include="Blif\cm152a.blif" />
+    <None Include="Blif\cm162a.blif" />
+    <None Include="Blif\cm163a.blif" />
+    <None Include="Blif\cm82a.blif" />
+    <None Include="Blif\cm85a.blif" />
+    <None Include="Blif\cmb.blif" />
+    <None Include="Blif\comp.blif" />
+    <None Include="Blif\count.blif" />
+    <None Include="Blif\cu.blif" />
+    <None Include="Blif\example2.blif" />
+    <None Include="Blif\f51m.blif" />
+    <None Include="Blif\frg1.blif" />
+    <None Include="Blif\g25.blif" />
+    <None Include="Blif\g36.blif" />
+    <None Include="Blif\int2float.blif" />
+    <None Include="Blif\ITC_b04.blif" />
+    <None Include="Blif\ITC_b08.blif" />
+    <None Include="Blif\ITC_b10.blif" />
+    <None Include="Blif\ITC_b11.blif" />
+    <None Include="Blif\lal.blif" />
+    <None Include="Blif\majority.blif" />
+    <None Include="Blif\mux.blif" />
+    <None Include="Blif\my_adder.blif" />
+    <None Include="Blif\parity.blif" />
+    <None Include="Blif\pcle.blif" />
+    <None Include="Blif\pcler8.blif" />
+    <None Include="Blif\priority.blif" />
+    <None Include="Blif\rot.blif" />
+    <None Include="Blif\router.blif" />
+    <None Include="Blif\sct.blif" />
+    <None Include="Blif\tcon.blif" />
+    <None Include="Blif\term1.blif" />
+    <None Include="Blif\too_large.blif" />
+    <None Include="Blif\ttt2.blif" />
+    <None Include="Blif\unreg.blif" />
+    <None Include="Blif\x1.blif" />
+    <None Include="Blif\x2.blif" />
+    <None Include="Blif\x3.blif" />
+    <None Include="Blif\x4.blif" />
+    <None Include="Blif\z4ml.blif" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\buttonHoldClicking.png" />
+    <Resource Include="img\buttonTrueClickin.png" />
+    <Resource Include="img\img1.jpg" />
+    <Resource Include="img\img1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,96 @@
+﻿<Window x:Class="WpfApp.WindowCNF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        xmlns:WpfApp="clr-namespace:WpfApp" 
+        xmlns:Controls="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        mc:Ignorable="d"
+        Title="Упрощение КНФ" Height="450" Width="800"
+        WindowState="Maximized"
+        MinWidth="1000" 
+        MinHeight="1000">
+    <Window.Background>
+        <ImageBrush ImageSource="img/img1.png"/>
+    </Window.Background>
+
+    <Grid x:Name="gridCnf">
+        <StackPanel Grid.Row="0" 
+                    Grid.ColumnSpan="1" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right"
+                    Height="50" 
+                    VerticalAlignment="Top">
+            <TextBlock Foreground="GreenYellow"
+                       FontSize="25" 
+                       Text="Sat Solver: "
+                       Margin="7,7,20,0"/>
+            <ComboBox x:Name="comboBoxSatSolver"
+                      Width="100" Height="30" 
+                      Margin="7,7,20,0" 
+                      HorizontalAlignment="Right" 
+                      VerticalAlignment="Top" 
+                      FontSize="16">
+                <TextBlock>Riss</TextBlock>
+                <TextBlock>Candy</TextBlock>
+            </ComboBox>
+            <Button x:Name="buttonSimplification" 
+                    Content="Упрощение" 
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Top"
+                    Width="110" 
+                    Margin="7,7,7,20"
+                    FontSize="16" 
+                    Click="ButtonSimplification_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="img/buttonHoldClicking.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="buttonBack" 
+                    Content="Назад"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Width="110" 
+                    Margin="7,7,7,20"
+                    FontSize="16" 
+                    Click="ButtonBack_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="img/buttonHoldClicking.png"/>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel Margin="10,60,10,10" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <TabControl Margin="0,0,0,0"  
+                        FontSize="16"  
+                        Height="556" 
+                        VerticalAlignment="Top" 
+                        FontFamily="Inconsolata" >
+                <TabItem Header="C0">
+                    <DataGrid x:Name="dataGridCnf" 
+                              HorizontalAlignment="Left" 
+                              VerticalAlignment="Top"
+                              AutoGenerateColumns="False" 
+                              SelectedItem ="{Binding SelectedItem}"
+                              ItemsSource="{Binding ListBoxItemcColllections}"/>
+                </TabItem>
+                <TabItem x:Name="CNFResult" Header="CNF Result">
+                    <DataGrid x:Name="dataGridCnfResol" 
+                              HorizontalAlignment="Left" 
+                              VerticalAlignment="Top" 
+                              AutoGenerateColumns="False" 
+                              ItemsSource="{Binding Results}"/>
+                </TabItem>
+            </TabControl>
+            <TextBox Margin="0,10,0,0" 
+                     x:Name="textBoxResult" 
+                     VerticalAlignment="Stretch"  
+                     FontSize="16" Height="333" 
+                     HorizontalScrollBarVisibility="Auto" 
+                     VerticalScrollBarVisibility="Auto" 
+                     TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,59 @@
+# Benchmark "2-adder" written by ABC on Thu May 03 23:11:00 2018
+.model 2-adder
+.inputs a1 b1 a0 b0 cin
+.outputs cout s1 s0
+.names b0 cin n8
+00 1
+.names a0 n8 n9
+10 1
+.names b0 cin n10
+11 1
+.names n9 n10 n11
+00 1
+.names a1 b1 n12
+00 1
+.names n11 n12 n13
+00 1
+.names a1 b1 n14
+11 1
+.names n13 n14 n15
+00 1
+.names n12 n14 n16
+00 1
+.names n11 n16 n17
+00 1
+.names a0 n10 n18
+00 1
+.names n8 n18 n19
+00 1
+.names a1 b1 n20
+01 1
+.names a1 b1 n21
+10 1
+.names n20 n21 n22
+00 1
+.names n19 n22 n23
+00 1
+.names n17 n23 n24
+00 1
+.names n8 n10 n25
+00 1
+.names a0 n25 n26
+10 1
+.names b0 cin n27
+01 1
+.names b0 cin n28
+10 1
+.names n27 n28 n29
+00 1
+.names a0 n29 n30
+00 1
+.names n26 n30 n31
+00 1
+.names n15 cout
+0 1
+.names n24 s1
+0 1
+.names n31 s0
+0 1
+.end

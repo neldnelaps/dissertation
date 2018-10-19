@@ -1,0 +1,49 @@
+# Benchmark "mux_cl" written by ABC on Mon Apr 16 18:57:26 2018
+.model mux_cl
+.inputs a b c d e f g h i j k
+.outputs l
+.names g i n12
+10 1
+.names h i n13
+11 1
+.names n12 n13 n14
+00 1
+.names j n14 n15
+10 1
+.names e i n16
+10 1
+.names f i n17
+11 1
+.names n16 n17 n18
+00 1
+.names j n18 n19
+00 1
+.names n15 n19 n20
+00 1
+.names k n20 n21
+10 1
+.names c i n22
+10 1
+.names d i n23
+11 1
+.names n22 n23 n24
+00 1
+.names j n24 n25
+10 1
+.names b i n26
+11 1
+.names a i n27
+10 1
+.names n26 n27 n28
+00 1
+.names j n28 n29
+00 1
+.names n25 n29 n30
+00 1
+.names k n30 n31
+00 1
+.names n21 n31 n32
+00 1
+.names n32 l
+0 1
+.end

@@ -1,0 +1,77 @@
+# Benchmark "CM163" written by ABC on Mon Apr 16 18:58:32 2018
+.model CM163
+.inputs a b c d e f g h i j k l m n o p
+.outputs q r s t u
+.names e f n21
+01 1
+.names c d n22
+11 1
+.names j n22 n23
+11 1
+.names j n22 n24
+00 1
+.names n23 n24 n25
+00 1
+.names e f n26
+11 1
+.names n25 n26 n27
+01 1
+.names a n21 n28
+11 1
+.names n27 n28 q
+00 1
+.names j n22 n30
+01 1
+.names l n30 n31
+11 1
+.names l n30 n32
+00 1
+.names n31 n32 n33
+00 1
+.names n26 n33 n34
+10 1
+.names b n21 n35
+11 1
+.names n34 n35 r
+00 1
+.names l n30 n37
+01 1
+.names m n37 n38
+11 1
+.names m n37 n39
+00 1
+.names n38 n39 n40
+00 1
+.names n26 n40 n41
+10 1
+.names g n21 n42
+11 1
+.names n41 n42 s
+00 1
+.names m n22 n44
+01 1
+.names j n44 n45
+01 1
+.names l n45 n46
+01 1
+.names n n46 n47
+11 1
+.names n n46 n48
+00 1
+.names n47 n48 n49
+00 1
+.names n26 n49 n50
+10 1
+.names h n21 n51
+11 1
+.names n50 n51 t
+00 1
+.names i p n53
+11 1
+.names k o n54
+11 1
+.names n53 n54 n55
+11 1
+.names d n55 u
+11 1
+.end
